@@ -1,4 +1,7 @@
-const Home = () => {
+
+
+const Home = async () => {
+   
     return ( 
         <div>
             <h1>Home</h1>
