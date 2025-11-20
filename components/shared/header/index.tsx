@@ -3,6 +3,7 @@ import { ShoppingCart, UserIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import ToggleTheme from '@/components/ToggleTheme';
 
 const Header = () => {
   return (
@@ -22,16 +23,20 @@ const Header = () => {
           </span>
         </Link>
         {/* 2 */}
-        <div className='flex gap-2 sm:gap-4'>
+        <div className='flex place-items-center justify-evenly sm:gap-4 space-x-6'>
+          <ToggleTheme />
           <Link href='/cart'>
-            <Button variant='ghost' size='icon'>
+            <Button  variant='ghost' size='icon'>
               <ShoppingCart className='w-5 h-5 sm:w-6 sm:h-6' />
+              <span className='capitalize'>Cart</span>
             </Button>
           </Link>
-
-          <Button variant='ghost' size='icon'>
-            <UserIcon className='w-5 h-5 sm:w-6 sm:h-6' />
-          </Button>
+          <Link href='/cart'>
+            <Button  size='icon'>
+              <UserIcon className='w-5 h-5 sm:w-6 sm:h-6' />
+              <span className='capitalize'>Sign in</span>
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
