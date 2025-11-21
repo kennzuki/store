@@ -1,12 +1,12 @@
-
+import ProductList from '@/components/product/product-list';
+import sampleData from '@/db/sample-data';
 
 const Home = async () => {
-   
-    return ( 
-        <div>
-            <h1>Home</h1>
-        </div>
-     );
-}
- 
+  return (
+    <>
+      <ProductList data={sampleData.products} title={'new arrivals'} limit={4} />
+    </>
+  );
+};
+
 export default Home;
